@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E0E0E0">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        tools:listitem="@layout/rv_item"
+        tools:itemCount="30"/>
+
+    <com.tuann.floatingactionbuttonexpandable.FloatingActionButtonExpandable
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        app:fab_content="Start a new chat"
+        app:fab_text_color="@android:color/white"
+        app:fab_bg_color="#03A9F4"
+        app:fab_icon="@drawable/chat"
+        app:fab_duration="100"
+        app:fab_typeface="fonts/RobotoSlab-Regular.ttf"
+        app:fab_expanded="true"/>
+</RelativeLayout>
