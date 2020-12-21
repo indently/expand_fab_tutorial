@@ -3,6 +3,7 @@ package com.codepalace.expandfab
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,8 +23,16 @@ class MainActivity : AppCompatActivity() {
 
         addToList()
         setUpRecyclerView()
+        setUpFab()
 
+    }
+
+    private fun setUpFab() {
         val fab = binding.fab
+
+        fab.setOnClickListener {
+            Toast.makeText(applicationContext, "New chat clicked*", Toast.LENGTH_SHORT).show()
+        }
 
         binding.rvRecycler.addOnScrollListener(object: RecyclerView.OnScrollListener(){
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -34,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-
     }
 
     private fun setUpRecyclerView() {

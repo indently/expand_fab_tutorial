@@ -26,7 +26,6 @@
         app:fab_text_color="@android:color/white"
         app:fab_bg_color="#03A9F4"
         app:fab_icon="@drawable/chat"
-        app:fab_duration="100"
-        app:fab_typeface="fonts/RobotoSlab-Regular.ttf"
+        app:fab_duration="200"
         app:fab_expanded="true"/>
 </RelativeLayout>
